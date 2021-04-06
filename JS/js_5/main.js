@@ -155,8 +155,8 @@ car.addDriver({vodiu:{name:'andrii',age:21}});
 console.log(car);
 */
 
-
 /*
+
 /!*
 -створити класс попелюшка з полями ім'я, вік, розмір ноги
 --Створити 10 попелюшок , покласти їх в масив
@@ -206,12 +206,11 @@ populi.push(pop10);
 console.log(populi);
 
 for (let items of populi){
-    for (let item in princ){
-        if(items.size===princ[item]){
+        if(items.size===princ.sizeZna){
             console.log(items.name);
         }
-    }
-}*/
+}
+*/
 
 
 /*
