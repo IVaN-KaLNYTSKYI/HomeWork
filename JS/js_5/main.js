@@ -334,7 +334,7 @@ class UltraNout extends Noyt{
         super(opera,poty,name,dum);
         this.vag=vag;
     }
-    vkl() {
+    vklOne() {
             if(this.vag<2 && this.batari>4){
                 console.log("все ок")
             }else console.log("Error");
@@ -407,7 +407,7 @@ console.log(noyt);
 
 let ynoyt=new UltraNout(4,400,'hp',16,1);
 console.log(ynoyt)
-ynoyt.vkl();
+ynoyt.vklOne();
 
 let basic=new BasicPk(8,400,'hp');
 console.log(basic);
