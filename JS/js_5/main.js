@@ -265,3 +265,169 @@ populi.push(pop10);
 let princ=new Princ("dima",47,16.3)
 console.log(princ)
 princ.poc(populi);*/
+
+
+
+/*                                       це  нове дз                                                  */
+
+/*
+
+/!*Реалізовуємо свій компютерний магазин.
+===
+Необхідно реалізувати базовий клас комютера. Який має лише параметри:
+    Оперативна память.
+    Потужність процесора. (цифра від 0 до 1000)
+Назва.
+    В кожного компютера має бути метод включання.
+===
+Від базового компютрера треба реалізувати ноутбук.
+    Він має нову властивість дюймаж монітора.
+
+    У нього зявляється нова змінна роботи батареї. Ця змінна визначається як потужність / (дюйми * оперативку)
+===
+Від ноутбука потрібно зробити ультрабук.
+    Він має нову змінну ваги.
+    При включенні ультрабуку має видаватися помилка, якшо вага більша за 2кг та батарея тримаж менше ніж 4 години.
+===
+Від базвого класу потрібно створити базовий ПК.
+    В нього має бути новий метод запуску ігор.
+    Кількість FPS визначається як потужність / опервтивку.
+    Example: `You are playing *GAME_NAME* with *FPS_COUNT* FSP`
+
+Компютер можна апгрейдити.
+    Потужність процесора можна збільшувати максимум на 10%. Зменшувати її не можна.
+    Оперативку можна збільшити лише в 2 рази. Зменшувати її не можна.
+    Для зміни характеритик мають бути свої методи. Мняти змінну "в лоб" заборонено.
+===
+// Від базового ПК необхідно зробити ігнорий ПК.
+//     Кількість ФПС має бути рівно в 2 рази більший ніж в звичайного ПК.
+//     При запуску однієї гри потужніть процесора має падати на 0.1%.
+// Якшо потужність процесора менша ніж 500. І оперативка менша за 8 потрібно ивдати помилку,
+//     що на цьому відрі ігри не запускаються.*!/
+
+class Computer{
+    constructor(opera,poty,name,) {
+        this.name=name;
+        this.opera=opera;
+        this.poty=poty;
+    }
+
+    vkl(){
+       let  include=confirm("Включений-");
+        if(include){
+            console.log('YES');
+        }else {
+            console.log("NO");
+        }
+    }
+}
+class Noyt extends Computer{
+    constructor(opera,poty,name,dum) {
+        super(opera,poty,name);
+        this.dum=dum;
+        this.batari=poty/(dum*opera);
+    }
+
+}
+class UltraNout extends Noyt{
+    constructor(opera,poty,name,dum,vag) {
+        super(opera,poty,name,dum);
+        this.vag=vag;
+    }
+    vkl() {
+            if(this.vag<2 && this.batari>4){
+                console.log("все ок")
+            }else console.log("Error");
+    }
+}
+
+class BasicPk extends Computer{
+    constructor(opera,poty,name) {
+        super(opera,poty,name);
+        this.fps=poty/opera;
+    }
+
+    vklGame(nameGame){
+        console.log(`You are playing ${nameGame} with ${this.fps} FSP`);
+    }
+}
+
+class Abgred extends Computer{
+    constructor(opera,poty,name) {
+        super(opera,poty,name);
+    }
+
+    increment(persent){
+        if (persent<=10) {
+            let a = (this.poty * persent) / 100;
+            this.poty = this.poty + a
+            return this.poty
+        }
+        else return console.log(`максимум на 10%,а ти збільшив на ${persent}`);
+    }
+    incrementOpera(namber){
+        if(namber<=2){
+            this.opera=this.opera*namber;
+            console.log(this.opera);
+        }
+
+    }
+}
+
+class GamePk extends BasicPk{
+    constructor(opera,poty,name) {
+        super(opera,poty,name,);
+        this.fps1=this.fps*2;
+    }
+    game(namberGame){
+        if (namberGame>0){
+            let a = (this.poty * (namberGame*0.1)) / 100;
+            this.poty = this.poty -a
+            console.log(this.poty);
+        }
+        else console.log(`В тебе не має запущених ігор`);
+
+    }
+    potProcessor(){
+        if(this.poty>500&&this.opera>8){
+            console.log("все ок")
+        }
+        else console.log("на цьому відрі ігри не запускаються")
+    }
+
+}
+
+let computer=new Computer(8,400,"hp");
+console.log(computer)
+computer.vkl()
+
+let noyt=new Noyt(8,400,'hp',16,);
+console.log(noyt);
+
+
+let ynoyt=new UltraNout(4,400,'hp',16,1);
+console.log(ynoyt)
+ynoyt.vkl();
+
+let basic=new BasicPk(8,400,'hp');
+console.log(basic);
+basic.vklGame("fifa");
+
+let abgred=new Abgred(8,400,"hp")
+console.log(abgred);
+abgred.increment(9);
+console.log(abgred);
+abgred.incrementOpera(2);
+console.log(abgred);
+
+
+
+let basicP=new GamePk(7,400,'mak');
+console.log(basicP)
+basicP.game(1);
+basicP.potProcessor();
+
+*/
+
+
+
