@@ -18,20 +18,12 @@ console.log(sort);
 let sortOne=arr.sort((i, j)=> j-i);
 console.log(sortOne);*/
 
-/*
 
-let filterZero=arr.filter((value)=>{
-    if(value%3===0){
-        console.log(value);
-    }
-})
+/*let filterZero=arr.filter((value)=>{ return value%3===0} );
+console.log(filterZero)
 console.log('*************************')
-
-let filterOne=arr.filter((value)=>{
-    if (value>10){
-        console.log(value);
-    }
-})*/
+let filterOne=arr.filter((value)=>{return value>10})
+console.log(filterOne)*/
 
 //
 ///*let forE=arr.forEach((namber)=>document.write(`<br>${namber}`));*/
@@ -77,13 +69,8 @@ let sortString=arrString.sort((i,j)=>{
 });
 console.log(sortString)*/
 
-/*
-let filterString=arrString.filter((i)=>{
-    if(i.length>4){
-        console.log(i)
-    }
-})*/
-
+/*let filterString=arrString.filter((i)=>i.length>4);
+console.log(filterString);*/
 /*
 let mapString=arrString.map((i)=> `Sam says ${i}`)
 console.log(mapString)*/
@@ -113,7 +100,8 @@ d) відсортувати його за індентифікатором
 e) Всі хто одружений мають попасти у новий масив та отрмати квартиру (reduce)*/
 
 
-/*const users = [
+/*
+const users = [
     {name: 'vasya', age: 31, isMarried: false},
     {name: 'petya', age: 30, isMarried: true},
     {name: 'kolya', age: 29, isMarried: true},
@@ -125,7 +113,8 @@ e) Всі хто одружений мають попасти у новий ма
     {name: 'masha', age: 30, isMarried: true},
     {name: 'olya', age: 31, isMarried: false},
     {name: 'max', age: 31, isMarried: true}
-];*/
+];
+*/
 
 
 /*
@@ -150,15 +139,12 @@ let sortUsers0ne=users.sort((i,j)=>{
     return -1
 });
 console.log(sortUsersOne)*/
-
-/*let mapUsers=users.map((i,l)=> {
+/*
+let mapUsers=users.map((i,l)=> {
     i.id=l+1;
     return i
-
 })
-let a=[]
-a.push(users)
-console.log(a)
+console.log(mapUsers)
                                                      //два способи
 /!*let mapUsers = users.map((name, index) => {
   return {
@@ -187,8 +173,7 @@ console.log(a)*/
 
 
 
-/*
-const cars = [
+/*const cars = [
     {producer:"subaru",model: "wrx",year: 2010, color:"blue",type: "sedan",engine: "ej204x",volume: 2,power: 400},
     {producer:"subaru",model: "legacy",year: 2007, color:"silver",type: "sedan",engine: "ez30",volume: 3,power: 250},
     {producer:"subaru",model: "tribeca",year: 2011, color:"white",type: "jeep",engine: "ej20",volume: 2,power: 300},
@@ -219,93 +204,52 @@ const cars = [
 - двигун більше 2л + сили більше 250
 - сили більше 250  + виробник бмв*/
 
-/*
-let filt=cars.filter((i)=>{
-    if(i.volume>3){
-        console.log(i);
-    }
-})*/
+/*let filt=cars.filter((i)=>i.volume>3);
+console.log(filt);*/
+
+/*let filt=cars.filter((i)=>i.volume===2);
+console.log(filt)*/
+
+/*let filt=cars.filter((i)=>i.producer==="mercedes")
+console.log(filt)*/
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.volume===2){
-        console.log(i);
-    }
-})*/
-
-/*
-let filt=cars.filter((i)=>{
-    if(i.producer==="mercedes"){
-        console.log(i);
-    }
-})*/
-
-/*
-let filt=cars.filter((i)=>{
-    if(i.producer==="mercedes" && i.volume>3){
-        console.log(i);
-    }
-})
+let filt=cars.filter((i)=>i.producer==="mercedes" && i.volume>3)
+console.log(filt)
 */
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.producer==="subaru" && i.volume>3){
-        console.log(i);
-    }
-})*/
+let filt=cars.filter((i)=>i.producer==="subaru" && i.volume>3)
+console.log(filt)*/
 
-/*let filt=cars.filter((i)=>{
-    if(i.power>300){
-        console.log(i);
-    }
-})*/
+/*let filt=cars.filter((i)=>i.power>300)
+console.log(filt)*/
+/*
+let filt=cars.filter((i)=>i.producer==="subaru" && i.power>300)
+console.log(filt)*/
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.producer==="subaru" && i.power>300){
-        console.log(i);
-    }
-})*/
-
-/*
-let filt=cars.filter((i)=>{
-    if(i.engine.startsWith("ej")){
-        console.log(i);
-    }
-})
+let filt=cars.filter((i)=>i.engine.startsWith("ej"))
+console.log(filt)
 */
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.producer==="subaru" && i.power>300&&i.engine.startsWith("ej")){
-        console.log(i);
-    }
-})
+let filt=cars.filter((i)=>i.producer==="subaru" && i.power>300&&i.engine.startsWith("ej"))
+console.log(filt)
 */
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.producer==="mercedes" && i.volume<3){
-        console.log(i);
-    }
-})
+let filt=cars.filter((i)=>i.producer==="mercedes" && i.volume<3)
+console.log(filt)
 */
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.power>250 && i.volume>2){
-        console.log(i);
-    }
-})*/
+let filt=cars.filter((i)=>i.power>250 && i.volume>2)
+console.log(filt)*/
 
 /*
-let filt=cars.filter((i)=>{
-    if(i.power>250 && i.producer==="bmw"){
-        console.log(i);
-    }
-})*/
-
+let filt=cars.filter((i)=>i.power>250 && i.producer==="bmw")
+console.log(filt)*/
 
 
 /*const usersWithAddress = [
@@ -368,33 +312,23 @@ let sortOne=usersWithAddress.sort((i, j)=> i.address.number>j.address.number);
 console.log(sortOne);
 */
 
-/*let filt=usersWithAddress.filter((i)=>{
-    if(i.age<30){
-        console.log(i);
-    }
-})*/
+/* let filt=usersWithAddress.filter((i)=>i.age<30)
+ console.log(filt);*/
 
 /*
-let filt=usersWithAddress.filter((i)=>{
-    if(i.isMarried===true){
-        console.log(i);
-    }
-})
+let filt=usersWithAddress.filter((i)=>i.isMarried)
+ console.log(filt);
 */
 
 /*
-let filt=usersWithAddress.filter((i)=>{
-    if(i.age<30&&i.isMarried===true){
-        console.log(i);
-    }
-})*/
+let filt=usersWithAddress.filter((i)=>i.age<30&&i.isMarried===true)
+ console.log(filt);
+*/
 
 /*
-let filt=usersWithAddress.filter((i)=>{
-    if(i.address.number%2===0){
-        console.log(i);
-    }
-})*/
+let filt=usersWithAddress.filter((i)=>i.address.number%2===0)
+ console.log(filt);
+*/
 
 /*
 let suma=usersWithAddress.reduce((i,j)=> {
@@ -413,6 +347,7 @@ let redUsers=usersWithAddress.reduce((i,j)=>{
 } ,[])
 
 console.log(redUsers);*/
+
 
 /*
     Зробили половину автопарку ремонт мотору, що збільшить потужність автомобілів на 10% (переприсвоєння змінної потужності).
@@ -447,29 +382,29 @@ console.log(redUsers);*/
     ]*/
 
 /*Далі необхідно рати кожну другу машинку (цикл з кроком в 2), та робити їй підвищення потужності двигуна на 10% та ціну на 5%*/
-/*let forE=cars.forEach((i,j)=>{
+/*let forE=cars.map((i,j)=>{
  if (j%2 ===0){
      i.volume=i.volume+((i.volume * 10) / 100);
      i.power=i.power+((i.volume * 10) / 100);
-     console.log(i)
  }
+    return i
 })
-console.log(cars);*/
-/*
-Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
+console.log(forE)*/
+/*Після того зробити перевірку досвіду ВСІХ наших водіїв. Якщо досвід водія менший за 5 років, але його вік більший за 25,
     то необідно відправити його на курси підвищення кваліфікації, що збільшить йому досвід на 1 рік.*/
+
 /*let maps=cars.map((i,l)=>{
     if(i.vlasnuk.yearC<5&&i.vlasnuk.age>25){
         i.vlasnuk.yearC+=1;
-        console.log(i)
     }
+    return i;
 })
+console.log(maps)
 console.log(cars)*/
-/*
-Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі*/
+/*Також спробуйте порахувати суму, яку потрібно потратити для покупки всіх цих авто в циклі*/
 /*
 let redCars=cars.reduce((i,j)=>{
     return i+j.power;
 } ,0)
-
-console.log(redCars);*/
+console.log(redCars);
+*/
