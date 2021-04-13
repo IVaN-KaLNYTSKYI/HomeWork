@@ -1,19 +1,16 @@
 /*/!*
 - Создать произвольный елемент с id = text. Используя JavaScript, сделайте так, чтобы при клике на кнопку исчезал элемент с id="text".*!/
-
-const div=document.createElement("div")
-div.style.backgroundColor="red";
-div.style.width="100px";
-div.style.height="100px"
+const div=document.createElement("div");
 document.body.append(div);
+div.style.height='100px';
+div.style.width='100px';
+div.style.backgroundColor='red';
 div.setAttribute("id","text");
-console.log(div)
 
-const forma = document.forms.form;
-forma.okBtn.onclick=(ev)=>{
+const byt=document.getElementById('btn');
+byt.onclick=(ev)=>{
     ev.preventDefault();
     div.style.display="none";
-
 }*/
 
 /*/!*
@@ -63,7 +60,6 @@ divs.addEventListener('click' , (ev)=>{
     resalt?forms.style.display="":forms.style.display="none";
     resalt?divs.value="forms yes":divs.value="forms no";
     resalt= !resalt;
-
 })*/
 
 /*/!*
@@ -91,48 +87,23 @@ for (let coments of coment){
 
 }*/
 
-/*
-/!*
+/*/!*
 - Створити 2 форми  по 2 інпути в кожній. ствоирити кнопку при кліку на яку считується та виводиться на консоль інформація з цих 2х форм.
     Кнопка повинна лежати за межами форм (Щоб ьуникнути  перезавантаження сторінки)
 Доступ до інпутів через Forms API. Отже дайте формі та інпутам всі необхідні атрибути.*!/
 
-const div=document.createElement("div");
-document.body.append(div);
-
-const formOne=document.createElement("form");
-formOne.setAttribute("action","");
-formOne.setAttribute("id","form");
-formOne.setAttribute("name","formOne");
-div.appendChild(formOne);
-const input=document.createElement("input");
-input.setAttribute("type","text");
-formOne.appendChild(input);
-const inputOne=document.createElement("input");
-inputOne.setAttribute("type","text");
-formOne.appendChild(inputOne);
-
-const formTwo=document.createElement("form");
-formTwo.setAttribute("action","");
-formTwo.setAttribute("id","formS");
-formTwo.setAttribute("name","formTwo");
-div.appendChild(formTwo);
-const inputS=document.createElement("input");
-inputS.setAttribute("type","text");
-formTwo.appendChild(inputS);
-const inputOneS=document.createElement("input");
-inputOneS.setAttribute("type","text");
-formTwo.appendChild(inputOneS);
+const forms=document.forms.formOne;
+const formsTwo=document.forms.formTwo;
 
 const but=document.createElement("button");
 document.body.append(but);
 but.innerText="считати дані";
 
 but.onclick=()=>{
-    console.log(input.value);
-    console.log(inputOne.value);
-    console.log(inputOneS.value);
-    console.log(inputS.value);
+    console.log(forms.someText.value);
+    console.log(forms.someTextOne.value);
+    console.log(formsTwo.someZero.value);
+    console.log(formsTwo.someOne.value);
 }*/
 
 /*
@@ -220,13 +191,12 @@ but.onclick=()=>{
     })
 }*/
 
-/*
-/!*-- Взяти масив юзерів
+/*-- Взяти масив юзерів
 Створити три чекбокси. Кожний з них активує фільтр для вищевказаного масиву. Фільтри можуть працювати як разом так і окремо.
 1й - відфільтровує юзерів зі статусом false (залишає зі статусом false)
 2й - залишає старших 29 років включно
 3й - залишає тих в кого місто Київ
-Дані виводить в документ*!/
+Дані виводить в документ*/
 
 const usersWithAddress = [
     {id: 9, name: 'vasya', age: 31, isMarried: false, address: {city: 'Kyiv', street: 'Gongadze', number: 16}},
@@ -242,8 +212,8 @@ const usersWithAddress = [
     {id: 11, name: 'max', age: 31, isMarried: true, address: {city: 'Rivne', street: 'Ivana Franka', number: 121}}
 ];
 
+
 const forma = document.forms.form;
-let res = true;
 forma.check1.onclick = () => {
     let div = document.createElement("div");
     document.body.append(div);
@@ -257,8 +227,6 @@ forma.check1.onclick = () => {
         })
     }
 }
-
-
 forma.check2.onclick = () => {
     let div = document.createElement("div");
     document.body.append(div);
@@ -271,9 +239,7 @@ forma.check2.onclick = () => {
             }
         })
     } else div.style.display = 'none'
-
 }
-
 forma.check3.onclick = () => {
     let div = document.createElement("div");
     document.body.append(div);
@@ -287,7 +253,6 @@ forma.check3.onclick = () => {
         })
     }
 }
-*/
 
 
 /*    ось  це неззззз */
