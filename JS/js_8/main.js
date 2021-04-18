@@ -95,32 +95,33 @@ sel.oninput=()=>{
 --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта*/
 
 
-/*const form = document.getElementById("form");
+const form = document.getElementById("form");
 const inp = document.getElementById("inp");
 const inpOne = document.getElementById("inpOne");
-form.oninput = (e) => {
-    localStorage.setItem("USER", JSON.stringify({name: `${inp.value}`, age: `${inpOne.value}`}));
-}
 const button = document.getElementById("button");
-
 const butDel = document.createElement("button");
 butDel.innerText = "ADD";
 const butUpd = document.createElement("button");
 butUpd.innerText = "UPD";
-
+let a=[];
 button.onclick = () => {
-    const inputSave = localStorage.getItem("USER");
-    const div = document.createElement("div");
+    let obj={
+       User:`${inp.value}`
+    }
+    a.push(obj);
+    localStorage.setItem("USER",JSON.stringify(a));
+}
+const inputSave = localStorage.getItem("USER");
+
+   /* const div = document.createElement("div");
     document.body.append(div);
     div.innerText = `${inputSave}`;
     div.append(butDel);
     div.append(butUpd);
     butDel.onclick = () => {
+        localStorage.removeItem("USER")
         div.style.display = "none"
     }
     butUpd.onclick = () => {
-
-    }
-
-}*/
+    }*/
 
