@@ -365,7 +365,7 @@ function home(eats){
         },3000)
     })
 }
-
+dsd
 async function day(){
     try {
         console.log(await goUp(true));
