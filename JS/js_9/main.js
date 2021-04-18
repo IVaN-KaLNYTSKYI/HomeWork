@@ -336,6 +336,7 @@ function wait(pr){
 
 }
 
+ewreref
 function work(works){
     return new Promise((resolve, reject)=>{
         console.log("я вже на роботі");
