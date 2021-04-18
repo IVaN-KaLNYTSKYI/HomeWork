@@ -267,8 +267,6 @@ goUp(true)
   })*/
 
 
-ww
-
 /*                                     async  await      */
 /*
 function goUp(up) {
