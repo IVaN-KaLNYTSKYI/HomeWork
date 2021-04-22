@@ -55,11 +55,11 @@ select.oninput=(ev)=>{
 const selectSave=localStorage.getItem("select");
 select.value=selectSave;*/
 
-/*/!*
+/*
 -Дан текстареа. В него можно ввести данные, нажать кнопку "сохранить" и они "фикисруются" (в хранилище), затем поредактировать их, затем еще поредактировать и возможно еще.....
 Требование : хранить историю своих изменений (даже после перезагрузки страницы).
 Сверху над текстареа должны появится стрелочки, с помощью которых можно перемещаться по истории (не забудьте!чекпоинт истории - нажатеи кнопки сохранить).
-*!/
+*/
 
 const text=document.getElementById("text");
 const butt=document.getElementById("button");
@@ -82,7 +82,7 @@ document.body.append(sel);
 }
 sel.oninput=()=>{
    text.value=sel.value
-}*/
+}
 
 /*
 
@@ -94,6 +94,7 @@ sel.oninput=()=>{
 
 --Каждому контакту добавить кнопку редактироваиня. При нажати на нее появляется форма, в которой есть все необходимые инпуты для редактирования, которые уже заполнены данными объекта*/
 
+/*
 
 const form = document.getElementById("form");
 const inp = document.getElementById("inp");
@@ -113,7 +114,7 @@ button.onclick = () => {
 }
 const inputSave = localStorage.getItem("USER");
 
-   /* const div = document.createElement("div");
+   /!* const div = document.createElement("div");
     document.body.append(div);
     div.innerText = `${inputSave}`;
     div.append(butDel);
@@ -123,5 +124,6 @@ const inputSave = localStorage.getItem("USER");
         div.style.display = "none"
     }
     butUpd.onclick = () => {
-    }*/
+    }*!/
 
+*/
